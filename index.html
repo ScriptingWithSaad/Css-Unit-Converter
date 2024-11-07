@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Converter |Scriptingwithsaad</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Units Converter</h1>
+        
+        <div class="converter-form">
+            <div class="input-group">
+                <input type="number" id="inputValue" placeholder="Enter value" step="any">
+                <select id="fromUnit">
+                    <option value="px">pixels (px)</option>
+                    <option value="vh">viewport height (vh)</option>
+                    <option value="vw">viewport width (vw)</option>
+                    <option value="rem">root em (rem)</option>
+                    <option value="em">em</option>
+                    <option value="pt">points (pt)</option>
+                    <option value="cm">centimeters (cm)</option>
+                    <option value="mm">millimeters (mm)</option>
+                    <option value="in">inches (in)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="number" id="outputValue" placeholder="Result" readonly step="any">
+                <select id="toUnit">
+                    <option value="px">pixels (px)</option>
+                    <option value="vh">viewport height (vh)</option>
+                    <option value="vw">viewport width (vw)</option>
+                    <option value="rem">root em (rem)</option>
+                    <option value="em">em</option>
+                    <option value="pt">points (pt)</option>
+                    <option value="cm">centimeters (cm)</option>
+                    <option value="mm">millimeters (mm)</option>
+                    <option value="in">inches (in)</option>
+                </select>
+            </div>
+            <button onclick="saveToHistory()" class="save-btn">Save to History</button>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Conversion History</h2>
+                <button onclick="clearHistory()" class="clear-all-btn">Clear All History</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        Conversion saved to history!
+    </div>
+
+  <script src="./script/script.js"></script>
+</body>
+</html>
